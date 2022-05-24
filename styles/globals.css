@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
   --bg-primary: #22223b;
@@ -6,10 +6,10 @@
 }
 
 html,
-body {  
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--bg-primary);
   color: #fff;
 }
@@ -23,7 +23,6 @@ a {
   box-sizing: border-box;
 }
 
-
 .cascading-right {
   margin-left: -50px;
 }
@@ -35,3 +34,25 @@ a {
   }
 }
 
+/* slightly transparent fallback */
+.backdrop-blur {
+  background-image: linear-gradient(
+    rgba(34, 34, 59, 0.6),
+    rgba(34, 34, 59, 0.9),
+    rgba(34, 34, 59, 0.95),
+    rgba(34, 34, 59, 0.96),
+    rgba(34, 34, 59, 0.97),
+    rgba(34, 34, 59, 0.97)
+  );
+  border-bottom: 1px solid rgba(34, 34, 59, 0.98);
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(60px);
+    background-image: none;
+    backdrop-filter: blur(60px);
+  }
+}
