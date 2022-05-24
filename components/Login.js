@@ -14,13 +14,7 @@ export default function Login() {
           />
         </div>
         <div className="col-lg-6 mb-5 mb-lg-0">
-          <div
-            className="card cascading-right"
-            style={{
-              background: "rgba(255, 255, 255, 0.1)",
-              backdropFilter: "blur(60px)",
-            }}
-          >
+          <div className="card cascading-right backdrop-blur">
             <div className="card-body p-5">
               <h2 className="mb-5" style={{ fontWeight: "bold" }}>
                 SIGN UP TO PRC
@@ -83,19 +77,23 @@ export default function Login() {
                     I agree with the terms & conditions
                   </label>
                 </div>
-
-                <button
-                  type="submit"
-                  className="btn btn-primary btn-block mb-4 me-4"
+                <div
+                  className="buttonDiv"
+                  style={{ display: "flex", justifyContent: "center" }}
                 >
-                  Sign up
-                </button>
-                <button
-                  type="reset"
-                  className="btn btn-secondary btn-block mb-4"
-                >
-                  Reset
-                </button>
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block mb-4 me-4"
+                  >
+                    Sign up
+                  </button>
+                  <button
+                    type="reset"
+                    className="btn btn-secondary btn-block mb-4"
+                  >
+                    Reset
+                  </button>
+                </div>
               </form>
             </div>
           </div>
