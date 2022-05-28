@@ -1,5 +1,5 @@
-import Login from "../components/Login";
+import Signup from "../components/Signup";
 
 export default function SignUp() {
-  return <Login />;
+  return <Signup />;
 }

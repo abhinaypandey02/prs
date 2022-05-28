@@ -22,7 +22,7 @@ export default function Login() {
       <div className="row g-0 align-items-center">
         <div className="col-lg-6 mb-5 mb-lg-0">
           <img
-            src={apartment.src}
+            src={secure_login.src}
             className="w-100 rounded-4 shadow-4"
             alt=""
           />

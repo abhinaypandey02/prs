@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
-  --bg-primary: #22223b;
-  --bg-secondary: #001d3d;
+  --bg-dark: #011627;
+  --bg-light: #fdfffc;
+  --green: #2ec4b6;
+  --red: #e71d36;
+  --orange: #ff9f1c;
 }
+
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-dark);
   color: #fff;
+  box-sizing: content-box;
 }
 
 a {
@@ -23,6 +28,7 @@ a {
   box-sizing: border-box;
 }
 
+/* Login and Singup page */
 .cascading-right {
   margin-left: -50px;
 }
@@ -55,4 +61,37 @@ a {
     background-image: none;
     backdrop-filter: blur(60px);
   }
+}
+
+/* Property banner */
+.property-banner {
+  width: 100vw;
+  background-color: var(--green);
+  padding: 4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+
+.property-banner-heading {
+  font-size: 8rem;
+  margin-right: 25vw;
+}
+.property-banner-description {
+  font-size: 2rem;
+}
+
+@media (max-width: 992px) {
+  .property-banner {
+    padding: 2rem;
+  }
+  .property-banner-heading {
+    font-size: 4rem;
+  }
+  .property-banner-description {
+    font-size: 1rem;
+  }
+}
+
+/* Property card */
+.property-card {
+  color: #000;
 }
