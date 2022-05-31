@@ -3,17 +3,21 @@ import apartment from "../assets/apartment.svg";
 import building from "../assets/building.svg";
 import { useForm } from "react-hook-form";
 import { getErrorMessage } from "../helpers";
+import axios from "axios";
 export default function Login() {
   const { register, handleSubmit,setError, getValues, formState: { errors } } = useForm();
   const onSubmit = data => {
     //custom validations
+    const {email,password,firstName}=data;
     let clean=true;
-    if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)){
+    if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
       setError("email",{type:"emailPattern"});
       clean=false;
     }
     if(!clean) return; 
-
+    // axios.post('http://localhost:4000/auth/signup',{email,password,firstName},{withCredentials:true}).then(res=>{
+    //   console.log(res.data)
+    // })
     console.log(data)
     alert("FORM OK!")
   };
